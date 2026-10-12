@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meerut MNDWI | Umang Rastogi</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1050px;
+    margin: auto;
+    padding: 25px;
+    background: #f3f6f8;
+    color: #203747;
+    line-height: 1.6;
+}
+section {
+    background: white;
+    padding: 22px;
+    margin: 20px 0;
+    border-radius: 12px;
+}
+img { max-width: 100%; height: auto; }
+table { border-collapse: collapse; width: 100%; }
+th, td { padding: 10px; border-bottom: 1px solid #ddd; }
+input { width: 85%; }
+a { color: #087785; }
+</style>
+</head>
+<body>
+
+<h1>Meerut: Changes in the Surface-Water Signal</h1>
+<p><strong>Umang Rastogi | HS25M113</strong><br>
+HS524M — Question 2, Row 22<br>
+Sentinel-2 Surface Reflectance | October–December, 2018–2025</p>
+
+<section>
+<h2>Question and Method</h2>
+<p>How did the surface-water spectral signal change within
+the Meerut City Urban Local Body between 2018 and 2025?</p>
+
+<p>MNDWI = (B3 − B11) / (B3 + B11), where B3 is green
+and B11 is shortwave infrared. The index is dimensionless.</p>
+
+<p>For each year, Sentinel-2 images were filtered to the
+Meerut City boundary and the October–December window.
+Scenes with cloudiness below 30% were retained.
+SCL-based masking removed no-data, defective, shadow,
+unclassified/cloud, cirrus and snow pixels.
+Reflectance was scaled by 0.0001, a median reflectance
+composite was created, and MNDWI was calculated.</p>
+
+<p>All numerical comparisons used a common valid mask,
+a 20 m analysis scale and UTM Zone 43N.
+Common valid coverage was 100.0% when rounded.
+Annual maps use the same −1 to +1 colour scale.</p>
+</section>
+
+<section>
+<h2>Annual Maps: Move the Slider</h2>
+<p>Year: <strong id="year">2018</strong></p>
+<input id="slider" type="range" min="2018" max="2025"
+step="1" value="2018" aria-label="Select annual MNDWI map">
+<img id="annual" src="Meerut_MNDWI_2018.png"
+alt="Annual Meerut MNDWI map">
+</section>
+
+<section>
+<h2>Annual Animation</h2>
+<img src="Meerut_MNDWI_2018_2025.gif"
+alt="October–December MNDWI animation, 2018–2025">
+</section>
+
+<section>
+<h2>2018–2025 Difference</h2>
+<img src="Meerut_MNDWI_Difference.png"
+alt="MNDWI difference: 2025 minus 2018">
+<p>Blue indicates increased MNDWI; red indicates decreased
+MNDWI. The display range is −0.3 to +0.3;
+values beyond this range use the end colours.</p>
+</section>
+
+<section>
+<h2>Numerical Results</h2>
+<img src="Meerut_MNDWI_Trend.png"
+alt="Annual city mean MNDWI trend">
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Year</th>
+      <th>Mean_MNDWI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2018</td>
+      <td>-0.352537</td>
+    </tr>
+    <tr>
+      <td>2019</td>
+      <td>-0.339401</td>
+    </tr>
+    <tr>
+      <td>2020</td>
+      <td>-0.363367</td>
+    </tr>
+    <tr>
+      <td>2021</td>
+      <td>-0.351763</td>
+    </tr>
+    <tr>
+      <td>2022</td>
+      <td>-0.343121</td>
+    </tr>
+    <tr>
+      <td>2023</td>
+      <td>-0.339093</td>
+    </tr>
+    <tr>
+      <td>2024</td>
+      <td>-0.361181</td>
+    </tr>
+    <tr>
+      <td>2025</td>
+      <td>-0.343353</td>
+    </tr>
+  </tbody>
+</table>
+<p><a href="Meerut_Annual_MNDWI.csv">Download statistics CSV</a></p>
+</section>
+
+<section>
+<h2>Interpretation</h2>
+<p>Mean MNDWI increased from −0.352537 in 2018 to
+−0.343353 in 2025, a difference of +0.009184.
+This represents a small increase in the city-wide
+surface-water spectral signal.</p>
+
+<p>The annual values fluctuate rather than increasing steadily.
+The lowest annual mean occurred in 2020 (−0.363367),
+and the highest in 2023 (−0.339093).
+Negative city-wide means indicate that non-water surfaces
+dominate the aggregate signal; they do not imply an absence
+of individual water bodies.</p>
+
+<p>The difference map shows the spatial distribution of
+increases and decreases. A city-wide mean can conceal
+opposing local changes. These results do not establish
+changes in actual water area, water quality or river restoration.</p>
+</section>
+
+<section>
+<h2>Limitations</h2>
+<ul>
+<li>B3 has 10 m pixels and B11 has 20 m pixels.
+The analysis uses a 20 m scale; small ponds and narrow
+waterways may be affected by mixed pixels and resampling.</li>
+<li>Cloud masking can leave residual haze or remove valid
+dark surfaces. Image counts vary between years.</li>
+<li>Median composites smooth short-lived water signals.
+A consistent seasonal window does not eliminate differences
+in rainfall or acquisition dates.</li>
+<li>Urban shadows, wet soil and other surfaces can affect MNDWI.
+No ground-truth validation was performed.</li>
+<li>The same retrieved ULB boundary is used throughout;
+historical municipal boundary changes are not assessed.</li>
+</ul>
+</section>
+
+<section>
+<h2>Sources</h2>
+<p>Boundary: MEERUT CITY, ULB code 800716,
+from Swachh Bharat Mission boundaries distributed through
+ramSeraph/DataMeet's
+<a href="https://github.com/ramSeraph/indian_admin_boundaries/releases/tag/urban">
+Indian Urban Boundaries release</a>.</p>
+
+<p>Satellite data: ESA/Copernicus,
+<a href="https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED">
+COPERNICUS/S2_SR_HARMONIZED</a>,
+accessed through Google Earth Engine.</p>
+
+<p>Processing: Python, Earth Engine and geemap,
+following the workflow taught in Lectures 24–27.</p>
+</section>
+
+<script>
+document.getElementById("slider").addEventListener("input", function() {
+    document.getElementById("year").textContent = this.value;
+    document.getElementById("annual").src =
+        "Meerut_MNDWI_" + this.value + ".png";
+});
+</script>
+
+</body>
+</html>
