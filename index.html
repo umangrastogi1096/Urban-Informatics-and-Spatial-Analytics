@@ -1,0 +1,2049 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_66881d9e683f74a5172e4489e1253a01 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_66881d9e683f74a5172e4489e1253a01" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_66881d9e683f74a5172e4489e1253a01 = L.map(
+                "map_66881d9e683f74a5172e4489e1253a01",
+                {
+                    center: [13.711113524458064, 79.59179492750235],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 16,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_66881d9e683f74a5172e4489e1253a01);
+
+            
+
+        
+    
+            var tile_layer_e9f70b40c3996cb5b855dd46a2cf8faa = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e9f70b40c3996cb5b855dd46a2cf8faa.addTo(map_66881d9e683f74a5172e4489e1253a01);
+        
+    
+            var tile_layer_95eafccad0ef3a4120885bfa38a3a90f = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_95eafccad0ef3a4120885bfa38a3a90f.addTo(map_66881d9e683f74a5172e4489e1253a01);
+        
+    
+            var feature_group_53e976336eb0e88b825820d0f0f2f78f = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_cluster_5b4ece83e12b86313d0d22975f13b6e4 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_4fb710420f27878de3bffe49371de72e = L.marker(
+                [13.714526960426394, 79.5943186700841],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_e126c2f8d63d5c1ef663e3a67f921e61 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c70ba4b4bb9fe4a4f03260b383288b3a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3dc6c9ba368be99812555e06b4033483 = $(`<div id="html_3dc6c9ba368be99812555e06b4033483" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Opposite admin building </h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260901135938688.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_c70ba4b4bb9fe4a4f03260b383288b3a.setContent(html_3dc6c9ba368be99812555e06b4033483);
+            
+        
+
+        marker_4fb710420f27878de3bffe49371de72e.bindPopup(popup_c70ba4b4bb9fe4a4f03260b383288b3a)
+        ;
+
+        
+    
+    
+            marker_4fb710420f27878de3bffe49371de72e.bindTooltip(
+                `<div>
+                     Opposite admin building 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4fb710420f27878de3bffe49371de72e.setIcon(icon_e126c2f8d63d5c1ef663e3a67f921e61);
+            
+    
+            var marker_8d2319e1f2163a6321dde81a4cd3cbae = L.marker(
+                [13.715696210063944, 79.59177190000067],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_d8a460fe12ac30a8964bd960cd03b5fa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6b3803b9d21d7be29766874f2e44601a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c327fadc87252346074e93343b3b29b5 = $(`<div id="html_c327fadc87252346074e93343b3b29b5" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Opposite AB1</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260901140732920.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_6b3803b9d21d7be29766874f2e44601a.setContent(html_c327fadc87252346074e93343b3b29b5);
+            
+        
+
+        marker_8d2319e1f2163a6321dde81a4cd3cbae.bindPopup(popup_6b3803b9d21d7be29766874f2e44601a)
+        ;
+
+        
+    
+    
+            marker_8d2319e1f2163a6321dde81a4cd3cbae.bindTooltip(
+                `<div>
+                     Opposite AB1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8d2319e1f2163a6321dde81a4cd3cbae.setIcon(icon_d8a460fe12ac30a8964bd960cd03b5fa);
+            
+    
+            var marker_9bd53d51bb51fe627576647998cde181 = L.marker(
+                [13.717013400000003, 79.58704116999998],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_b6aebaab8f0b607c0e113d83e0ddb6ff = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_79e8b30bc3d2fda8e08d341d8b8e35e6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_04d5f6a275efe2d046a13c88ce0fb7a5 = $(`<div id="html_04d5f6a275efe2d046a13c88ce0fb7a5" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Outside north mess</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260902145707031.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_79e8b30bc3d2fda8e08d341d8b8e35e6.setContent(html_04d5f6a275efe2d046a13c88ce0fb7a5);
+            
+        
+
+        marker_9bd53d51bb51fe627576647998cde181.bindPopup(popup_79e8b30bc3d2fda8e08d341d8b8e35e6)
+        ;
+
+        
+    
+    
+            marker_9bd53d51bb51fe627576647998cde181.bindTooltip(
+                `<div>
+                     Outside north mess
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9bd53d51bb51fe627576647998cde181.setIcon(icon_b6aebaab8f0b607c0e113d83e0ddb6ff);
+            
+    
+            var marker_b9e2ecb80f92b2d025e9744855fe7bb1 = L.marker(
+                [13.717334999999999, 79.58648293],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_5d2db10e44597d65664a9fcfdd14f918 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_721f1d8ea5acecab5c83baf624318fae = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5e88c80babe1de65a2b79ef523053152 = $(`<div id="html_5e88c80babe1de65a2b79ef523053152" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Behind DES hostel</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260902145944433.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_721f1d8ea5acecab5c83baf624318fae.setContent(html_5e88c80babe1de65a2b79ef523053152);
+            
+        
+
+        marker_b9e2ecb80f92b2d025e9744855fe7bb1.bindPopup(popup_721f1d8ea5acecab5c83baf624318fae)
+        ;
+
+        
+    
+    
+            marker_b9e2ecb80f92b2d025e9744855fe7bb1.bindTooltip(
+                `<div>
+                     Behind DES hostel
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b9e2ecb80f92b2d025e9744855fe7bb1.setIcon(icon_5d2db10e44597d65664a9fcfdd14f918);
+            
+    
+            var marker_dd0647e87fbfbcd3e9a535607b521379 = L.marker(
+                [13.717604599999998, 79.58693941],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_2c57339464dc078cc4af56566330a4a8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d49a40d0bd7305439cb302500e3afa3b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4f161a40ab63201d32c1e73c6d379aeb = $(`<div id="html_4f161a40ab63201d32c1e73c6d379aeb" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>DES Hostel front </h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260902150154104.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_d49a40d0bd7305439cb302500e3afa3b.setContent(html_4f161a40ab63201d32c1e73c6d379aeb);
+            
+        
+
+        marker_dd0647e87fbfbcd3e9a535607b521379.bindPopup(popup_d49a40d0bd7305439cb302500e3afa3b)
+        ;
+
+        
+    
+    
+            marker_dd0647e87fbfbcd3e9a535607b521379.bindTooltip(
+                `<div>
+                     DES Hostel front 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dd0647e87fbfbcd3e9a535607b521379.setIcon(icon_2c57339464dc078cc4af56566330a4a8);
+            
+    
+            var marker_800672b99530139c25b7930adc89b641 = L.marker(
+                [13.71799433, 79.58716412],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_464a8d1d0dd4c3d7ef505fd8cd06e15e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a79e4a0e3383cda0a219e91b414d6b19 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3d41a65b50eefb46db0479fe6acd1dca = $(`<div id="html_3d41a65b50eefb46db0479fe6acd1dca" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Malhar Hostel Front</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260902150315821.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_a79e4a0e3383cda0a219e91b414d6b19.setContent(html_3d41a65b50eefb46db0479fe6acd1dca);
+            
+        
+
+        marker_800672b99530139c25b7930adc89b641.bindPopup(popup_a79e4a0e3383cda0a219e91b414d6b19)
+        ;
+
+        
+    
+    
+            marker_800672b99530139c25b7930adc89b641.bindTooltip(
+                `<div>
+                     Malhar Hostel Front
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_800672b99530139c25b7930adc89b641.setIcon(icon_464a8d1d0dd4c3d7ef505fd8cd06e15e);
+            
+    
+            var marker_9dde7c51820adfab228b06e9748c30da = L.marker(
+                [13.71775014, 79.58745039],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_2869cbbe6d32461ff7c9611adaf0db14 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f1b30ed53663de389479d516c58ea6c5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_37f565520e4b2041be0c7b2b01ad2e93 = $(`<div id="html_37f565520e4b2041be0c7b2b01ad2e93" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Malhar hostel gate</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260902150452154.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_f1b30ed53663de389479d516c58ea6c5.setContent(html_37f565520e4b2041be0c7b2b01ad2e93);
+            
+        
+
+        marker_9dde7c51820adfab228b06e9748c30da.bindPopup(popup_f1b30ed53663de389479d516c58ea6c5)
+        ;
+
+        
+    
+    
+            marker_9dde7c51820adfab228b06e9748c30da.bindTooltip(
+                `<div>
+                     Malhar hostel gate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9dde7c51820adfab228b06e9748c30da.setIcon(icon_2869cbbe6d32461ff7c9611adaf0db14);
+            
+    
+            var marker_c19a6b99baba96d7b8de876798fc7397 = L.marker(
+                [13.71656694, 79.58851290999999],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_162c6409c5d1148376644e4e1f5abd05 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fffc8bc8a02ae93c4dcbc43766a5488e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0b214f5cf2adcc7a6e1062394b3a4e77 = $(`<div id="html_0b214f5cf2adcc7a6e1062394b3a4e77" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Near malhar hostel</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260902151623058.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_fffc8bc8a02ae93c4dcbc43766a5488e.setContent(html_0b214f5cf2adcc7a6e1062394b3a4e77);
+            
+        
+
+        marker_c19a6b99baba96d7b8de876798fc7397.bindPopup(popup_fffc8bc8a02ae93c4dcbc43766a5488e)
+        ;
+
+        
+    
+    
+            marker_c19a6b99baba96d7b8de876798fc7397.bindTooltip(
+                `<div>
+                     Near malhar hostel
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c19a6b99baba96d7b8de876798fc7397.setIcon(icon_162c6409c5d1148376644e4e1f5abd05);
+            
+    
+            var marker_904d8ee0ef31355868f954def03e2758 = L.marker(
+                [13.715611670000001, 79.58858182],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_37a16defb7fd21684b84c18eaa11c244 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8ba111efda9ee6ac4048b69de7024b8a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cee58b7b6db59db23004f8acc6215e5b = $(`<div id="html_cee58b7b6db59db23004f8acc6215e5b" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Road</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260902151951496.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_8ba111efda9ee6ac4048b69de7024b8a.setContent(html_cee58b7b6db59db23004f8acc6215e5b);
+            
+        
+
+        marker_904d8ee0ef31355868f954def03e2758.bindPopup(popup_8ba111efda9ee6ac4048b69de7024b8a)
+        ;
+
+        
+    
+    
+            marker_904d8ee0ef31355868f954def03e2758.bindTooltip(
+                `<div>
+                     Road
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_904d8ee0ef31355868f954def03e2758.setIcon(icon_37a16defb7fd21684b84c18eaa11c244);
+            
+    
+            var marker_9bc1c43aa57040d447ebfe42a55f5418 = L.marker(
+                [13.715016870000001, 79.58924036999998],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_391170388e7151112de97b691513220f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_875e721b57ebba5e9de3b23cd99d6c0d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c61aa37446f1a1316acf3e98480b3a94 = $(`<div id="html_c61aa37446f1a1316acf3e98480b3a94" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Road AB1 cut</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260902152207625.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_875e721b57ebba5e9de3b23cd99d6c0d.setContent(html_c61aa37446f1a1316acf3e98480b3a94);
+            
+        
+
+        marker_9bc1c43aa57040d447ebfe42a55f5418.bindPopup(popup_875e721b57ebba5e9de3b23cd99d6c0d)
+        ;
+
+        
+    
+    
+            marker_9bc1c43aa57040d447ebfe42a55f5418.bindTooltip(
+                `<div>
+                     Road AB1 cut
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9bc1c43aa57040d447ebfe42a55f5418.setIcon(icon_391170388e7151112de97b691513220f);
+            
+    
+            var marker_d09bf9cb57ee8b94c915e28fd7707c9a = L.marker(
+                [13.714567569999996, 79.58959247],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_4add8a6cbbc14601c425a0bca90dc2b0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0d412f9ad10fb0720c5a2ad7f6cbcc7e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5f7b663b70e6c83ffc137ee8ca8b7666 = $(`<div id="html_5f7b663b70e6c83ffc137ee8ca8b7666" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Near LHC bus stop</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260902152327675.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_0d412f9ad10fb0720c5a2ad7f6cbcc7e.setContent(html_5f7b663b70e6c83ffc137ee8ca8b7666);
+            
+        
+
+        marker_d09bf9cb57ee8b94c915e28fd7707c9a.bindPopup(popup_0d412f9ad10fb0720c5a2ad7f6cbcc7e)
+        ;
+
+        
+    
+    
+            marker_d09bf9cb57ee8b94c915e28fd7707c9a.bindTooltip(
+                `<div>
+                     Near LHC bus stop
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d09bf9cb57ee8b94c915e28fd7707c9a.setIcon(icon_4add8a6cbbc14601c425a0bca90dc2b0);
+            
+    
+            var marker_74427710a8494ab3235847f8fa146408 = L.marker(
+                [13.71430683, 79.5901248],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_4e62857dae22b134f817a77b601dfaee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_367e29e05d889c3187e372d0901a3059 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4bd8e80e84965d6d33de7adabfb4e790 = $(`<div id="html_4bd8e80e84965d6d33de7adabfb4e790" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>LHC bus stop</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260902152444227.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_367e29e05d889c3187e372d0901a3059.setContent(html_4bd8e80e84965d6d33de7adabfb4e790);
+            
+        
+
+        marker_74427710a8494ab3235847f8fa146408.bindPopup(popup_367e29e05d889c3187e372d0901a3059)
+        ;
+
+        
+    
+    
+            marker_74427710a8494ab3235847f8fa146408.bindTooltip(
+                `<div>
+                     LHC bus stop
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_74427710a8494ab3235847f8fa146408.setIcon(icon_4e62857dae22b134f817a77b601dfaee);
+            
+    
+            var marker_c8d0d319a33da731f98c24fc7447a08c = L.marker(
+                [13.714977349999996, 79.59103217],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_26a5f29769fd759bd86435f8ab49b22b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ee35dd87e5091aed5c703ec2e13c58f0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5661338c36f74b319e6d23904925065c = $(`<div id="html_5661338c36f74b319e6d23904925065c" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Outside LHC</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260902152807893.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_ee35dd87e5091aed5c703ec2e13c58f0.setContent(html_5661338c36f74b319e6d23904925065c);
+            
+        
+
+        marker_c8d0d319a33da731f98c24fc7447a08c.bindPopup(popup_ee35dd87e5091aed5c703ec2e13c58f0)
+        ;
+
+        
+    
+    
+            marker_c8d0d319a33da731f98c24fc7447a08c.bindTooltip(
+                `<div>
+                     Outside LHC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c8d0d319a33da731f98c24fc7447a08c.setIcon(icon_26a5f29769fd759bd86435f8ab49b22b);
+            
+    
+            var marker_28a3c5ef07af5941f04f5aeebed2e30f = L.marker(
+                [13.70719971, 79.59470848],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_d6ae1531d7e36036b88a5126a3bb0158 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ff1c48c9df8ac21a2d3baf7842c9b273 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_56a93afec550ba75786eaf7221d85ac7 = $(`<div id="html_56a93afec550ba75786eaf7221d85ac7" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Health center </h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260904074058421.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_ff1c48c9df8ac21a2d3baf7842c9b273.setContent(html_56a93afec550ba75786eaf7221d85ac7);
+            
+        
+
+        marker_28a3c5ef07af5941f04f5aeebed2e30f.bindPopup(popup_ff1c48c9df8ac21a2d3baf7842c9b273)
+        ;
+
+        
+    
+    
+            marker_28a3c5ef07af5941f04f5aeebed2e30f.bindTooltip(
+                `<div>
+                     Health center 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_28a3c5ef07af5941f04f5aeebed2e30f.setIcon(icon_d6ae1531d7e36036b88a5126a3bb0158);
+            
+    
+            var marker_2df5092de1fbbf36f8009463bc04cd2d = L.marker(
+                [13.706655279999998, 79.59449264],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_0c945b780c005fa173196ad3bba6f463 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f7d05d010ca30db03af8578020d89c1e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1d3f0c939fd8610bf335fa8560401e09 = $(`<div id="html_1d3f0c939fd8610bf335fa8560401e09" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Near old library </h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260904074243690.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_f7d05d010ca30db03af8578020d89c1e.setContent(html_1d3f0c939fd8610bf335fa8560401e09);
+            
+        
+
+        marker_2df5092de1fbbf36f8009463bc04cd2d.bindPopup(popup_f7d05d010ca30db03af8578020d89c1e)
+        ;
+
+        
+    
+    
+            marker_2df5092de1fbbf36f8009463bc04cd2d.bindTooltip(
+                `<div>
+                     Near old library 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2df5092de1fbbf36f8009463bc04cd2d.setIcon(icon_0c945b780c005fa173196ad3bba6f463);
+            
+    
+            var marker_8b15827bddddd2ca5973a263b6f348c8 = L.marker(
+                [13.712831560000001, 79.59169805],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_e7f691633472231d100634a663b61189 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bb442b1eb15c0daf1603309b78a236cf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_30e5b9e3b5d9ef22bf449fe2e76240e5 = $(`<div id="html_30e5b9e3b5d9ef22bf449fe2e76240e5" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>bin 1 near director circle </h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260906112253287.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_bb442b1eb15c0daf1603309b78a236cf.setContent(html_30e5b9e3b5d9ef22bf449fe2e76240e5);
+            
+        
+
+        marker_8b15827bddddd2ca5973a263b6f348c8.bindPopup(popup_bb442b1eb15c0daf1603309b78a236cf)
+        ;
+
+        
+    
+    
+            marker_8b15827bddddd2ca5973a263b6f348c8.bindTooltip(
+                `<div>
+                     bin 1 near director circle 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8b15827bddddd2ca5973a263b6f348c8.setIcon(icon_e7f691633472231d100634a663b61189);
+            
+    
+            var marker_db82cbc60252543f9ed6f5f97e028316 = L.marker(
+                [13.711985109999999, 79.59159744999998],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_88294aace12295dc1b72e1b6085a2992 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_096c3a23e5d3ab4180138f76b0546f72 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7fcb1a84ac2b4d1ebb696592a629a620 = $(`<div id="html_7fcb1a84ac2b4d1ebb696592a629a620" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Bin3 director circle</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260906112434288.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_096c3a23e5d3ab4180138f76b0546f72.setContent(html_7fcb1a84ac2b4d1ebb696592a629a620);
+            
+        
+
+        marker_db82cbc60252543f9ed6f5f97e028316.bindPopup(popup_096c3a23e5d3ab4180138f76b0546f72)
+        ;
+
+        
+    
+    
+            marker_db82cbc60252543f9ed6f5f97e028316.bindTooltip(
+                `<div>
+                     Bin3 director circle
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_db82cbc60252543f9ed6f5f97e028316.setIcon(icon_88294aace12295dc1b72e1b6085a2992);
+            
+    
+            var marker_0424a84cc08d247ae2d3867d5553d97c = L.marker(
+                [13.71214995, 79.59238389],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_db9bbd3052b28ebb3de88a91aa4c4929 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_722c4ad0c69c24942ab7e8f6b31965a8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ecf0bcfd6689c52b3010c889b2aa565a = $(`<div id="html_ecf0bcfd6689c52b3010c889b2aa565a" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Bin2 director circle</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260906112601031.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_722c4ad0c69c24942ab7e8f6b31965a8.setContent(html_ecf0bcfd6689c52b3010c889b2aa565a);
+            
+        
+
+        marker_0424a84cc08d247ae2d3867d5553d97c.bindPopup(popup_722c4ad0c69c24942ab7e8f6b31965a8)
+        ;
+
+        
+    
+    
+            marker_0424a84cc08d247ae2d3867d5553d97c.bindTooltip(
+                `<div>
+                     Bin2 director circle
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0424a84cc08d247ae2d3867d5553d97c.setIcon(icon_db9bbd3052b28ebb3de88a91aa4c4929);
+            
+    
+            var marker_a7d0f713268e73e54407d24435d96eb2 = L.marker(
+                [13.711081960000001, 79.59231634],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_ff72404cfac056a154eaa303cc9e1172 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c5c1a8853edf87a5c05e8610b7c5f0ed = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9e095fb0614331fcf6672728f9b4738c = $(`<div id="html_9e095fb0614331fcf6672728f9b4738c" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Bin4 road</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260906112748233.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_c5c1a8853edf87a5c05e8610b7c5f0ed.setContent(html_9e095fb0614331fcf6672728f9b4738c);
+            
+        
+
+        marker_a7d0f713268e73e54407d24435d96eb2.bindPopup(popup_c5c1a8853edf87a5c05e8610b7c5f0ed)
+        ;
+
+        
+    
+    
+            marker_a7d0f713268e73e54407d24435d96eb2.bindTooltip(
+                `<div>
+                     Bin4 road
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a7d0f713268e73e54407d24435d96eb2.setIcon(icon_ff72404cfac056a154eaa303cc9e1172);
+            
+    
+            var marker_af660fd0fdc53db4045b43c4843b34a1 = L.marker(
+                [13.709830599999998, 79.59234922],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_f4684f0d48cbb1d0867f060e55119a7a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b200c9fdc4583a6b39b3321b306660ef = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f00baf65995c47c3eae22a5624172cb1 = $(`<div id="html_f00baf65995c47c3eae22a5624172cb1" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Bin5 road</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260906112940803.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_b200c9fdc4583a6b39b3321b306660ef.setContent(html_f00baf65995c47c3eae22a5624172cb1);
+            
+        
+
+        marker_af660fd0fdc53db4045b43c4843b34a1.bindPopup(popup_b200c9fdc4583a6b39b3321b306660ef)
+        ;
+
+        
+    
+    
+            marker_af660fd0fdc53db4045b43c4843b34a1.bindTooltip(
+                `<div>
+                     Bin5 road
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_af660fd0fdc53db4045b43c4843b34a1.setIcon(icon_f4684f0d48cbb1d0867f060e55119a7a);
+            
+    
+            var marker_b229900d9c997f50fd21c365df78477a = L.marker(
+                [13.70833538, 79.59267413999999],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_9ae37f9682c32d37fc6a49ab24e73cf1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed180d19777a97d7c0772b3b94c5e3b5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4600f0d4781567cfb9d8a0fece481641 = $(`<div id="html_4600f0d4781567cfb9d8a0fece481641" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Waste Bin 21</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <p>Photograph unavailable</p>      </div>     </div>`)[0];
+                popup_ed180d19777a97d7c0772b3b94c5e3b5.setContent(html_4600f0d4781567cfb9d8a0fece481641);
+            
+        
+
+        marker_b229900d9c997f50fd21c365df78477a.bindPopup(popup_ed180d19777a97d7c0772b3b94c5e3b5)
+        ;
+
+        
+    
+    
+            marker_b229900d9c997f50fd21c365df78477a.bindTooltip(
+                `<div>
+                     Waste Bin 21
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b229900d9c997f50fd21c365df78477a.setIcon(icon_9ae37f9682c32d37fc6a49ab24e73cf1);
+            
+    
+            var marker_43e68d240bb1615855b96a95f04f626f = L.marker(
+                [13.708319849999999, 79.59266649999998],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_ab0befffdc6832a5e451e5e5c67393cc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b9fe440fff3abe6feb2026b3fab6f1d5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5f4c2adcaead583b92bea4fadd286aa0 = $(`<div id="html_5f4c2adcaead583b92bea4fadd286aa0" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Bin6 road</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260906113200094.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_b9fe440fff3abe6feb2026b3fab6f1d5.setContent(html_5f4c2adcaead583b92bea4fadd286aa0);
+            
+        
+
+        marker_43e68d240bb1615855b96a95f04f626f.bindPopup(popup_b9fe440fff3abe6feb2026b3fab6f1d5)
+        ;
+
+        
+    
+    
+            marker_43e68d240bb1615855b96a95f04f626f.bindTooltip(
+                `<div>
+                     Bin6 road
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_43e68d240bb1615855b96a95f04f626f.setIcon(icon_ab0befffdc6832a5e451e5e5c67393cc);
+            
+    
+            var marker_8d466b3a264b0d715382894b4211e977 = L.marker(
+                [13.707423170000002, 79.59290057],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_e75651c24f1a08aee84a23c05726778d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7e1477663cf09bf80933f931f1de5aec = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_371d6270d47b9ba8a7c46a78a01f015f = $(`<div id="html_371d6270d47b9ba8a7c46a78a01f015f" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Bin7 road</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260906113340676.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_7e1477663cf09bf80933f931f1de5aec.setContent(html_371d6270d47b9ba8a7c46a78a01f015f);
+            
+        
+
+        marker_8d466b3a264b0d715382894b4211e977.bindPopup(popup_7e1477663cf09bf80933f931f1de5aec)
+        ;
+
+        
+    
+    
+            marker_8d466b3a264b0d715382894b4211e977.bindTooltip(
+                `<div>
+                     Bin7 road
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8d466b3a264b0d715382894b4211e977.setIcon(icon_e75651c24f1a08aee84a23c05726778d);
+            
+    
+            var marker_ffd1c15248ae4c4d7d19b545e5a84831 = L.marker(
+                [13.707425889999996, 79.59293083],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_e199eb9128e9f720c6c94bb8e66f3c82 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5d1dee76454ee151200e7e16310d1f88 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_643d49aa4509dac10aac7f3dea74d5e8 = $(`<div id="html_643d49aa4509dac10aac7f3dea74d5e8" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Bin8 road</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260906113403139.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_5d1dee76454ee151200e7e16310d1f88.setContent(html_643d49aa4509dac10aac7f3dea74d5e8);
+            
+        
+
+        marker_ffd1c15248ae4c4d7d19b545e5a84831.bindPopup(popup_5d1dee76454ee151200e7e16310d1f88)
+        ;
+
+        
+    
+    
+            marker_ffd1c15248ae4c4d7d19b545e5a84831.bindTooltip(
+                `<div>
+                     Bin8 road
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ffd1c15248ae4c4d7d19b545e5a84831.setIcon(icon_e199eb9128e9f720c6c94bb8e66f3c82);
+            
+    
+            var marker_705877ed93acb29c2dda5b0626f62a90 = L.marker(
+                [13.707357019999998, 79.59291492],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_b81e671136e768c4577d24042cc95cf8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4ba54f3e07ed8b2cdb9ab58e72d5d02d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_70244bb8a6856d5424ad35e1edb28bdc = $(`<div id="html_70244bb8a6856d5424ad35e1edb28bdc" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Waste Bin 25</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <p>Photograph unavailable</p>      </div>     </div>`)[0];
+                popup_4ba54f3e07ed8b2cdb9ab58e72d5d02d.setContent(html_70244bb8a6856d5424ad35e1edb28bdc);
+            
+        
+
+        marker_705877ed93acb29c2dda5b0626f62a90.bindPopup(popup_4ba54f3e07ed8b2cdb9ab58e72d5d02d)
+        ;
+
+        
+    
+    
+            marker_705877ed93acb29c2dda5b0626f62a90.bindTooltip(
+                `<div>
+                     Waste Bin 25
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_705877ed93acb29c2dda5b0626f62a90.setIcon(icon_b81e671136e768c4577d24042cc95cf8);
+            
+    
+            var marker_e0950859b9f5ba2a7d79b976298b645b = L.marker(
+                [13.707357019999998, 79.59291492],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_ee33017f8c6fc8962fd4d085717b0938 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d025e3bb863eb557d5849c6f2ce90965 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3d80922ada4b4bbe6fd777046274333e = $(`<div id="html_3d80922ada4b4bbe6fd777046274333e" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Bin9 road</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260906113441685.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_d025e3bb863eb557d5849c6f2ce90965.setContent(html_3d80922ada4b4bbe6fd777046274333e);
+            
+        
+
+        marker_e0950859b9f5ba2a7d79b976298b645b.bindPopup(popup_d025e3bb863eb557d5849c6f2ce90965)
+        ;
+
+        
+    
+    
+            marker_e0950859b9f5ba2a7d79b976298b645b.bindTooltip(
+                `<div>
+                     Bin9 road
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e0950859b9f5ba2a7d79b976298b645b.setIcon(icon_ee33017f8c6fc8962fd4d085717b0938);
+            
+    
+            var marker_bd4ac82745f6de3c480e2ea91246d532 = L.marker(
+                [13.70734612, 79.59294972],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_e368dd361fcd50afb472c599e3fdd2bd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0c6ddab826d88a8e9b09073ffc5a42d4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a28cca30ddb5de6f1607e982ed28ce93 = $(`<div id="html_a28cca30ddb5de6f1607e982ed28ce93" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Bin10 road near south gate</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260906113459543.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_0c6ddab826d88a8e9b09073ffc5a42d4.setContent(html_a28cca30ddb5de6f1607e982ed28ce93);
+            
+        
+
+        marker_bd4ac82745f6de3c480e2ea91246d532.bindPopup(popup_0c6ddab826d88a8e9b09073ffc5a42d4)
+        ;
+
+        
+    
+    
+            marker_bd4ac82745f6de3c480e2ea91246d532.bindTooltip(
+                `<div>
+                     Bin10 road near south gate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bd4ac82745f6de3c480e2ea91246d532.setIcon(icon_e368dd361fcd50afb472c599e3fdd2bd);
+            
+    
+            var marker_e8d66242c9f30e87340731c19e48e61d = L.marker(
+                [13.7071721, 79.59280137999998],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_5074b485e5732c0e334aae37a3ceaf76 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9d7522db03dd999b633b5a422970f188 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_11f4d843e2f190837c4deb91188180de = $(`<div id="html_11f4d843e2f190837c4deb91188180de" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Waste Bin 28</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <p>Photograph unavailable</p>      </div>     </div>`)[0];
+                popup_9d7522db03dd999b633b5a422970f188.setContent(html_11f4d843e2f190837c4deb91188180de);
+            
+        
+
+        marker_e8d66242c9f30e87340731c19e48e61d.bindPopup(popup_9d7522db03dd999b633b5a422970f188)
+        ;
+
+        
+    
+    
+            marker_e8d66242c9f30e87340731c19e48e61d.bindTooltip(
+                `<div>
+                     Waste Bin 28
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e8d66242c9f30e87340731c19e48e61d.setIcon(icon_5074b485e5732c0e334aae37a3ceaf76);
+            
+    
+            var marker_6aa0fbad82c99dedb8fa836657a9dd65 = L.marker(
+                [13.70716627, 79.59279189],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_67d58357349b2e09b9390e135c4b4e32 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5c5690cffed62742257386ec35e1938d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ad9f60c0e50bed8baa1d3c122a6e73cf = $(`<div id="html_ad9f60c0e50bed8baa1d3c122a6e73cf" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Bin11 road</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260906113627643.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_5c5690cffed62742257386ec35e1938d.setContent(html_ad9f60c0e50bed8baa1d3c122a6e73cf);
+            
+        
+
+        marker_6aa0fbad82c99dedb8fa836657a9dd65.bindPopup(popup_5c5690cffed62742257386ec35e1938d)
+        ;
+
+        
+    
+    
+            marker_6aa0fbad82c99dedb8fa836657a9dd65.bindTooltip(
+                `<div>
+                     Bin11 road
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6aa0fbad82c99dedb8fa836657a9dd65.setIcon(icon_67d58357349b2e09b9390e135c4b4e32);
+            
+    
+            var marker_48c937d5ebf13fc6532ac331f8f8e8f2 = L.marker(
+                [13.70607357, 79.59445192],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_3a4e405a03539a62852a6ace7be7fc3a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_93f9ddcd72c64f52dfb95472f32a205b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_28a1f874a4ecc64109dc9806501cdc4b = $(`<div id="html_28a1f874a4ecc64109dc9806501cdc4b" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Near south gate</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260906114007081.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_93f9ddcd72c64f52dfb95472f32a205b.setContent(html_28a1f874a4ecc64109dc9806501cdc4b);
+            
+        
+
+        marker_48c937d5ebf13fc6532ac331f8f8e8f2.bindPopup(popup_93f9ddcd72c64f52dfb95472f32a205b)
+        ;
+
+        
+    
+    
+            marker_48c937d5ebf13fc6532ac331f8f8e8f2.bindTooltip(
+                `<div>
+                     Near south gate
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_48c937d5ebf13fc6532ac331f8f8e8f2.setIcon(icon_3a4e405a03539a62852a6ace7be7fc3a);
+            
+    
+            var marker_5c3f227752ece805c263c22010639689 = L.marker(
+                [13.705630619999997, 79.59435674],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_f4b2b9df86489d03164093ab3b3ad6bc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_10e92093022b3ce183a9e0b08e053e69 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6a70a629433ae204091a510b04f128d0 = $(`<div id="html_6a70a629433ae204091a510b04f128d0" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Abuz </h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260906114111564.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_10e92093022b3ce183a9e0b08e053e69.setContent(html_6a70a629433ae204091a510b04f128d0);
+            
+        
+
+        marker_5c3f227752ece805c263c22010639689.bindPopup(popup_10e92093022b3ce183a9e0b08e053e69)
+        ;
+
+        
+    
+    
+            marker_5c3f227752ece805c263c22010639689.bindTooltip(
+                `<div>
+                     Abuz 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5c3f227752ece805c263c22010639689.setIcon(icon_f4b2b9df86489d03164093ab3b3ad6bc);
+            
+    
+            var marker_c123b8d3d65571c69d13b6fe69151982 = L.marker(
+                [13.707098909999997, 79.59444054999999],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_2b18caac87941d40ffb8c76946c7be30 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_466ee806fa3c810465d0d5a6a1251b93 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_464c6545a0b19e055dc3e8d86dc5d8ff = $(`<div id="html_464c6545a0b19e055dc3e8d86dc5d8ff" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Outside south mess</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260906114350126.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_466ee806fa3c810465d0d5a6a1251b93.setContent(html_464c6545a0b19e055dc3e8d86dc5d8ff);
+            
+        
+
+        marker_c123b8d3d65571c69d13b6fe69151982.bindPopup(popup_466ee806fa3c810465d0d5a6a1251b93)
+        ;
+
+        
+    
+    
+            marker_c123b8d3d65571c69d13b6fe69151982.bindTooltip(
+                `<div>
+                     Outside south mess
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c123b8d3d65571c69d13b6fe69151982.setIcon(icon_2b18caac87941d40ffb8c76946c7be30);
+            
+    
+            var marker_c7655a8c9cdcffebf894cacb8b2fa296 = L.marker(
+                [13.707578309999993, 79.59440334],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_08a716fe61d16ca2720dfa650af5c235 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c6abd3f7d715e5cef87ed702bd2a7704 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_17e3c75423c0e6042af8f7ced0c5af0b = $(`<div id="html_17e3c75423c0e6042af8f7ced0c5af0b" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Sahana hostel</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260906114455875.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_c6abd3f7d715e5cef87ed702bd2a7704.setContent(html_17e3c75423c0e6042af8f7ced0c5af0b);
+            
+        
+
+        marker_c7655a8c9cdcffebf894cacb8b2fa296.bindPopup(popup_c6abd3f7d715e5cef87ed702bd2a7704)
+        ;
+
+        
+    
+    
+            marker_c7655a8c9cdcffebf894cacb8b2fa296.bindTooltip(
+                `<div>
+                     Sahana hostel
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c7655a8c9cdcffebf894cacb8b2fa296.setIcon(icon_08a716fe61d16ca2720dfa650af5c235);
+            
+    
+            var marker_c4c1161d49c35a67eb6938520d717b9d = L.marker(
+                [13.70809528, 79.59484223],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_63e7d80908b12f296478f3536f7ff2fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7c3264ad9aa900e3aa14d7cbc15f5f02 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e4a5bf8073094f9415923774e7b79d00 = $(`<div id="html_e4a5bf8073094f9415923774e7b79d00" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>South canteen</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260906114621698.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_7c3264ad9aa900e3aa14d7cbc15f5f02.setContent(html_e4a5bf8073094f9415923774e7b79d00);
+            
+        
+
+        marker_c4c1161d49c35a67eb6938520d717b9d.bindPopup(popup_7c3264ad9aa900e3aa14d7cbc15f5f02)
+        ;
+
+        
+    
+    
+            marker_c4c1161d49c35a67eb6938520d717b9d.bindTooltip(
+                `<div>
+                     South canteen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c4c1161d49c35a67eb6938520d717b9d.setIcon(icon_63e7d80908b12f296478f3536f7ff2fe);
+            
+    
+            var marker_e0edf86ad3bddfdb626f026116ec6e5e = L.marker(
+                [13.70816822, 79.594832],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_41b7d2018e474da6e2e1eef006ce6e5f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8b3204cfe83d30ddf2ffc5091c0391fb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e399c4c84c38a32bfdf714958110f9b6 = $(`<div id="html_e399c4c84c38a32bfdf714958110f9b6" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>South canteen2</h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260906114651364.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_8b3204cfe83d30ddf2ffc5091c0391fb.setContent(html_e399c4c84c38a32bfdf714958110f9b6);
+            
+        
+
+        marker_e0edf86ad3bddfdb626f026116ec6e5e.bindPopup(popup_8b3204cfe83d30ddf2ffc5091c0391fb)
+        ;
+
+        
+    
+    
+            marker_e0edf86ad3bddfdb626f026116ec6e5e.bindTooltip(
+                `<div>
+                     South canteen2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e0edf86ad3bddfdb626f026116ec6e5e.setIcon(icon_41b7d2018e474da6e2e1eef006ce6e5f);
+            
+    
+            var marker_de2633d3fc930fb59a47b23c8b9bd2c0 = L.marker(
+                [13.708837109999996, 79.59394653999999],
+                {
+}
+            ).addTo(marker_cluster_5b4ece83e12b86313d0d22975f13b6e4);
+        
+    
+            var icon_5ee8193cd5506949dd888495e181dc09 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "trash",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a75bbb85a542d4540aa8a8edbdf838a9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8bc80284c776865a2b4f73dc5e205916 = $(`<div id="html_8bc80284c776865a2b4f73dc5e205916" style="width: 100.0%; height: 100.0%;">     <div style="width:250px;font-family:Arial;">          <h3>Sports ground </h3>          <p><b>Collected by:</b> UMANG RASTOGI</p>          <p><b>Field note:</b> Not recorded</p>          <img src="images/JPEG_20260906115039536.jpg" style="width:220px;max-width:100%;height:auto;">      </div>     </div>`)[0];
+                popup_a75bbb85a542d4540aa8a8edbdf838a9.setContent(html_8bc80284c776865a2b4f73dc5e205916);
+            
+        
+
+        marker_de2633d3fc930fb59a47b23c8b9bd2c0.bindPopup(popup_a75bbb85a542d4540aa8a8edbdf838a9)
+        ;
+
+        
+    
+    
+            marker_de2633d3fc930fb59a47b23c8b9bd2c0.bindTooltip(
+                `<div>
+                     Sports ground 
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_de2633d3fc930fb59a47b23c8b9bd2c0.setIcon(icon_5ee8193cd5506949dd888495e181dc09);
+            
+    
+            marker_cluster_5b4ece83e12b86313d0d22975f13b6e4.addTo(feature_group_53e976336eb0e88b825820d0f0f2f78f);
+        
+    
+            feature_group_53e976336eb0e88b825820d0f0f2f78f.addTo(map_66881d9e683f74a5172e4489e1253a01);
+        
+    
+            var layer_control_8f8968b930b5e12e7012d53f1f57d59a_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_e9f70b40c3996cb5b855dd46a2cf8faa,
+                    "Light Map" : tile_layer_95eafccad0ef3a4120885bfa38a3a90f,
+                },
+                overlays :  {
+                    "Waste-bin Observations" : feature_group_53e976336eb0e88b825820d0f0f2f78f,
+                },
+            };
+            let layer_control_8f8968b930b5e12e7012d53f1f57d59a = L.control.layers(
+                layer_control_8f8968b930b5e12e7012d53f1f57d59a_layers.base_layers,
+                layer_control_8f8968b930b5e12e7012d53f1f57d59a_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_66881d9e683f74a5172e4489e1253a01);
+
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_66881d9e683f74a5172e4489e1253a01);
+        
+    
+            var tile_layer_ddd5723598312eac0961efdb09b06d54 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_c9668067698e4c0c369d175ba0a920a4 = new L.Control.MiniMap(
+                tile_layer_ddd5723598312eac0961efdb09b06d54,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -5,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": true,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_66881d9e683f74a5172e4489e1253a01.addControl(mini_map_c9668067698e4c0c369d175ba0a920a4);
+        
+    
+            tile_layer_e9f70b40c3996cb5b855dd46a2cf8faa.addTo(map_66881d9e683f74a5172e4489e1253a01);
+        
+    
+            tile_layer_95eafccad0ef3a4120885bfa38a3a90f.addTo(map_66881d9e683f74a5172e4489e1253a01);
+        
+    
+                marker_4fb710420f27878de3bffe49371de72e.setIcon(icon_e126c2f8d63d5c1ef663e3a67f921e61);
+            
+    
+                marker_8d2319e1f2163a6321dde81a4cd3cbae.setIcon(icon_d8a460fe12ac30a8964bd960cd03b5fa);
+            
+    
+                marker_9bd53d51bb51fe627576647998cde181.setIcon(icon_b6aebaab8f0b607c0e113d83e0ddb6ff);
+            
+    
+                marker_b9e2ecb80f92b2d025e9744855fe7bb1.setIcon(icon_5d2db10e44597d65664a9fcfdd14f918);
+            
+    
+                marker_dd0647e87fbfbcd3e9a535607b521379.setIcon(icon_2c57339464dc078cc4af56566330a4a8);
+            
+    
+                marker_800672b99530139c25b7930adc89b641.setIcon(icon_464a8d1d0dd4c3d7ef505fd8cd06e15e);
+            
+    
+                marker_9dde7c51820adfab228b06e9748c30da.setIcon(icon_2869cbbe6d32461ff7c9611adaf0db14);
+            
+    
+                marker_c19a6b99baba96d7b8de876798fc7397.setIcon(icon_162c6409c5d1148376644e4e1f5abd05);
+            
+    
+                marker_904d8ee0ef31355868f954def03e2758.setIcon(icon_37a16defb7fd21684b84c18eaa11c244);
+            
+    
+                marker_9bc1c43aa57040d447ebfe42a55f5418.setIcon(icon_391170388e7151112de97b691513220f);
+            
+    
+                marker_d09bf9cb57ee8b94c915e28fd7707c9a.setIcon(icon_4add8a6cbbc14601c425a0bca90dc2b0);
+            
+    
+                marker_74427710a8494ab3235847f8fa146408.setIcon(icon_4e62857dae22b134f817a77b601dfaee);
+            
+    
+                marker_c8d0d319a33da731f98c24fc7447a08c.setIcon(icon_26a5f29769fd759bd86435f8ab49b22b);
+            
+    
+                marker_28a3c5ef07af5941f04f5aeebed2e30f.setIcon(icon_d6ae1531d7e36036b88a5126a3bb0158);
+            
+    
+                marker_2df5092de1fbbf36f8009463bc04cd2d.setIcon(icon_0c945b780c005fa173196ad3bba6f463);
+            
+    
+                marker_8b15827bddddd2ca5973a263b6f348c8.setIcon(icon_e7f691633472231d100634a663b61189);
+            
+    
+                marker_db82cbc60252543f9ed6f5f97e028316.setIcon(icon_88294aace12295dc1b72e1b6085a2992);
+            
+    
+                marker_0424a84cc08d247ae2d3867d5553d97c.setIcon(icon_db9bbd3052b28ebb3de88a91aa4c4929);
+            
+    
+                marker_a7d0f713268e73e54407d24435d96eb2.setIcon(icon_ff72404cfac056a154eaa303cc9e1172);
+            
+    
+                marker_af660fd0fdc53db4045b43c4843b34a1.setIcon(icon_f4684f0d48cbb1d0867f060e55119a7a);
+            
+    
+                marker_b229900d9c997f50fd21c365df78477a.setIcon(icon_9ae37f9682c32d37fc6a49ab24e73cf1);
+            
+    
+                marker_43e68d240bb1615855b96a95f04f626f.setIcon(icon_ab0befffdc6832a5e451e5e5c67393cc);
+            
+    
+                marker_8d466b3a264b0d715382894b4211e977.setIcon(icon_e75651c24f1a08aee84a23c05726778d);
+            
+    
+                marker_ffd1c15248ae4c4d7d19b545e5a84831.setIcon(icon_e199eb9128e9f720c6c94bb8e66f3c82);
+            
+    
+                marker_705877ed93acb29c2dda5b0626f62a90.setIcon(icon_b81e671136e768c4577d24042cc95cf8);
+            
+    
+                marker_e0950859b9f5ba2a7d79b976298b645b.setIcon(icon_ee33017f8c6fc8962fd4d085717b0938);
+            
+    
+                marker_bd4ac82745f6de3c480e2ea91246d532.setIcon(icon_e368dd361fcd50afb472c599e3fdd2bd);
+            
+    
+                marker_e8d66242c9f30e87340731c19e48e61d.setIcon(icon_5074b485e5732c0e334aae37a3ceaf76);
+            
+    
+                marker_6aa0fbad82c99dedb8fa836657a9dd65.setIcon(icon_67d58357349b2e09b9390e135c4b4e32);
+            
+    
+                marker_48c937d5ebf13fc6532ac331f8f8e8f2.setIcon(icon_3a4e405a03539a62852a6ace7be7fc3a);
+            
+    
+                marker_5c3f227752ece805c263c22010639689.setIcon(icon_f4b2b9df86489d03164093ab3b3ad6bc);
+            
+    
+                marker_c123b8d3d65571c69d13b6fe69151982.setIcon(icon_2b18caac87941d40ffb8c76946c7be30);
+            
+    
+                marker_c7655a8c9cdcffebf894cacb8b2fa296.setIcon(icon_08a716fe61d16ca2720dfa650af5c235);
+            
+    
+                marker_c4c1161d49c35a67eb6938520d717b9d.setIcon(icon_63e7d80908b12f296478f3536f7ff2fe);
+            
+    
+                marker_e0edf86ad3bddfdb626f026116ec6e5e.setIcon(icon_41b7d2018e474da6e2e1eef006ce6e5f);
+            
+    
+                marker_de2633d3fc930fb59a47b23c8b9bd2c0.setIcon(icon_5ee8193cd5506949dd888495e181dc09);
+            
+    
+            marker_cluster_5b4ece83e12b86313d0d22975f13b6e4.addTo(feature_group_53e976336eb0e88b825820d0f0f2f78f);
+        
+    
+            feature_group_53e976336eb0e88b825820d0f0f2f78f.addTo(map_66881d9e683f74a5172e4489e1253a01);
+        
+</script>
+</html>
