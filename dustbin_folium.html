@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4c48c807848e072a2c1b53f2d1cd42cd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_4c48c807848e072a2c1b53f2d1cd42cd" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4c48c807848e072a2c1b53f2d1cd42cd = L.map(
+                "map_4c48c807848e072a2c1b53f2d1cd42cd",
+                {
+                    center: [13.711113524458064, 79.59179492750235],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 16,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_4c48c807848e072a2c1b53f2d1cd42cd);
+
+            
+
+        
+    
+            var tile_layer_4b5ca2fdc692fcb6de80913523b38537 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4b5ca2fdc692fcb6de80913523b38537.addTo(map_4c48c807848e072a2c1b53f2d1cd42cd);
+        
+    
+            tile_layer_4b5ca2fdc692fcb6de80913523b38537.addTo(map_4c48c807848e072a2c1b53f2d1cd42cd);
+        
+    
+        function geo_json_5c40c278c7da421086db8da0e99b84bb_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "darkgreen",
+  "weight": 1,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "darkgreen",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 5,
+};
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_5c40c278c7da421086db8da0e99b84bb_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_5c40c278c7da421086db8da0e99b84bb = L.geoJson(null, {
+                onEachFeature: geo_json_5c40c278c7da421086db8da0e99b84bb_onEachFeature,
+            
+                pointToLayer: geo_json_5c40c278c7da421086db8da0e99b84bb_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_5c40c278c7da421086db8da0e99b84bb_add (data) {
+            geo_json_5c40c278c7da421086db8da0e99b84bb
+                .addData(data);
+        }
+            geo_json_5c40c278c7da421086db8da0e99b84bb_add({"bbox": [79.58648293, 13.705630619999997, 79.59484223, 13.71799433], "features": [{"bbox": [79.5943186700841, 13.714526960426394, 79.5943186700841, 13.714526960426394], "geometry": {"coordinates": [79.5943186700841, 13.714526960426394, 0.0], "type": "Point"}, "id": "0", "properties": {"note": "Not recorded", "timestamp": "2026-09-01 13:59:16.524000+00:00", "title": "Opposite admin building "}, "type": "Feature"}, {"bbox": [79.59177190000067, 13.715696210063944, 79.59177190000067, 13.715696210063944], "geometry": {"coordinates": [79.59177190000067, 13.715696210063944, 0.0], "type": "Point"}, "id": "1", "properties": {"note": "Not recorded", "timestamp": "2026-09-01 14:07:22.008000+00:00", "title": "Opposite AB1"}, "type": "Feature"}, {"bbox": [79.58704116999998, 13.717013400000003, 79.58704116999998, 13.717013400000003], "geometry": {"coordinates": [79.58704116999998, 13.717013400000003, 41.04193115234375], "type": "Point"}, "id": "2", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 14:56:40.947000+00:00", "title": "Outside north mess"}, "type": "Feature"}, {"bbox": [79.58648293, 13.717334999999999, 79.58648293, 13.717334999999999], "geometry": {"coordinates": [79.58648293, 13.717334999999999, 38.228271484375], "type": "Point"}, "id": "3", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 14:58:58.026000+00:00", "title": "Behind DES hostel"}, "type": "Feature"}, {"bbox": [79.58693941, 13.717604599999998, 79.58693941, 13.717604599999998], "geometry": {"coordinates": [79.58693941, 13.717604599999998, 37.5225830078125], "type": "Point"}, "id": "4", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 15:01:46.893000+00:00", "title": "DES Hostel front "}, "type": "Feature"}, {"bbox": [79.58716412, 13.71799433, 79.58716412, 13.71799433], "geometry": {"coordinates": [79.58716412, 13.71799433, 35.34112548828125], "type": "Point"}, "id": "5", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 15:03:05.333000+00:00", "title": "Malhar Hostel Front"}, "type": "Feature"}, {"bbox": [79.58745039, 13.71775014, 79.58745039, 13.71775014], "geometry": {"coordinates": [79.58745039, 13.71775014, 34.95220947265625], "type": "Point"}, "id": "6", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 15:04:45.820000+00:00", "title": "Malhar hostel gate"}, "type": "Feature"}, {"bbox": [79.58851290999999, 13.71656694, 79.58851290999999, 13.71656694], "geometry": {"coordinates": [79.58851290999999, 13.71656694, 28.59356689453125], "type": "Point"}, "id": "7", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 15:16:04.127000+00:00", "title": "Near malhar hostel"}, "type": "Feature"}, {"bbox": [79.58858182, 13.715611670000001, 79.58858182, 13.715611670000001], "geometry": {"coordinates": [79.58858182, 13.715611670000001, 26.3104248046875], "type": "Point"}, "id": "8", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 15:19:41.703000+00:00", "title": "Road"}, "type": "Feature"}, {"bbox": [79.58924036999998, 13.715016870000001, 79.58924036999998, 13.715016870000001], "geometry": {"coordinates": [79.58924036999998, 13.715016870000001, 20.23516845703125], "type": "Point"}, "id": "9", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 15:21:45.566000+00:00", "title": "Road AB1 cut"}, "type": "Feature"}, {"bbox": [79.58959247, 13.714567569999996, 79.58959247, 13.714567569999996], "geometry": {"coordinates": [79.58959247, 13.714567569999996, 19.839111328125], "type": "Point"}, "id": "10", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 15:22:53.389000+00:00", "title": "Near LHC bus stop"}, "type": "Feature"}, {"bbox": [79.5901248, 13.71430683, 79.5901248, 13.71430683], "geometry": {"coordinates": [79.5901248, 13.71430683, 17.46197509765625], "type": "Point"}, "id": "11", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 15:24:37.625000+00:00", "title": "LHC bus stop"}, "type": "Feature"}, {"bbox": [79.59103217, 13.714977349999996, 79.59103217, 13.714977349999996], "geometry": {"coordinates": [79.59103217, 13.714977349999996, 11.1209716796875], "type": "Point"}, "id": "12", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 15:28:00.463000+00:00", "title": "Outside LHC"}, "type": "Feature"}, {"bbox": [79.59470848, 13.70719971, 79.59470848, 13.70719971], "geometry": {"coordinates": [79.59470848, 13.70719971, 118.96026611328125], "type": "Point"}, "id": "13", "properties": {"note": "Not recorded", "timestamp": "2026-09-04 07:40:49.836000+00:00", "title": "Health center "}, "type": "Feature"}, {"bbox": [79.59449264, 13.706655279999998, 79.59449264, 13.706655279999998], "geometry": {"coordinates": [79.59449264, 13.706655279999998, 22.65753173828125], "type": "Point"}, "id": "14", "properties": {"note": "Not recorded", "timestamp": "2026-09-04 07:42:34.083000+00:00", "title": "Near old library "}, "type": "Feature"}, {"bbox": [79.59169805, 13.712831560000001, 79.59169805, 13.712831560000001], "geometry": {"coordinates": [79.59169805, 13.712831560000001, 18.6517333984375], "type": "Point"}, "id": "15", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:22:45.709000+00:00", "title": "bin 1 near director circle "}, "type": "Feature"}, {"bbox": [79.59159744999998, 13.711985109999999, 79.59159744999998, 13.711985109999999], "geometry": {"coordinates": [79.59159744999998, 13.711985109999999, 21.35223388671875], "type": "Point"}, "id": "16", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:24:26.779000+00:00", "title": "Bin3 director circle"}, "type": "Feature"}, {"bbox": [79.59238389, 13.71214995, 79.59238389, 13.71214995], "geometry": {"coordinates": [79.59238389, 13.71214995, 21.28509521484375], "type": "Point"}, "id": "17", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:25:54.617000+00:00", "title": "Bin2 director circle"}, "type": "Feature"}, {"bbox": [79.59231634, 13.711081960000001, 79.59231634, 13.711081960000001], "geometry": {"coordinates": [79.59231634, 13.711081960000001, 25.8599853515625], "type": "Point"}, "id": "18", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:27:42.620000+00:00", "title": "Bin4 road"}, "type": "Feature"}, {"bbox": [79.59234922, 13.709830599999998, 79.59234922, 13.709830599999998], "geometry": {"coordinates": [79.59234922, 13.709830599999998, 30.571533203125], "type": "Point"}, "id": "19", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:29:35.229000+00:00", "title": "Bin5 road"}, "type": "Feature"}, {"bbox": [79.59267413999999, 13.70833538, 79.59267413999999, 13.70833538], "geometry": {"coordinates": [79.59267413999999, 13.70833538, 32.932373046875], "type": "Point"}, "id": "20", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:31:51.021000+00:00", "title": null}, "type": "Feature"}, {"bbox": [79.59266649999998, 13.708319849999999, 79.59266649999998, 13.708319849999999], "geometry": {"coordinates": [79.59266649999998, 13.708319849999999, 33.18212890625], "type": "Point"}, "id": "21", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:31:53.575000+00:00", "title": "Bin6 road"}, "type": "Feature"}, {"bbox": [79.59290057, 13.707423170000002, 79.59290057, 13.707423170000002], "geometry": {"coordinates": [79.59290057, 13.707423170000002, 33.4071044921875], "type": "Point"}, "id": "22", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:33:34.828000+00:00", "title": "Bin7 road"}, "type": "Feature"}, {"bbox": [79.59293083, 13.707425889999996, 79.59293083, 13.707425889999996], "geometry": {"coordinates": [79.59293083, 13.707425889999996, 32.90716552734375], "type": "Point"}, "id": "23", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:33:57.586000+00:00", "title": "Bin8 road"}, "type": "Feature"}, {"bbox": [79.59291492, 13.707357019999998, 79.59291492, 13.707357019999998], "geometry": {"coordinates": [79.59291492, 13.707357019999998, 34.66717529296875], "type": "Point"}, "id": "24", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:34:34.029000+00:00", "title": null}, "type": "Feature"}, {"bbox": [79.59291492, 13.707357019999998, 79.59291492, 13.707357019999998], "geometry": {"coordinates": [79.59291492, 13.707357019999998, 34.66717529296875], "type": "Point"}, "id": "25", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:34:37.280000+00:00", "title": "Bin9 road"}, "type": "Feature"}, {"bbox": [79.59294972, 13.70734612, 79.59294972, 13.70734612], "geometry": {"coordinates": [79.59294972, 13.70734612, 36.034423828125], "type": "Point"}, "id": "26", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:34:53.793000+00:00", "title": "Bin10 road near south gate"}, "type": "Feature"}, {"bbox": [79.59280137999998, 13.7071721, 79.59280137999998, 13.7071721], "geometry": {"coordinates": [79.59280137999998, 13.7071721, 35.834228515625], "type": "Point"}, "id": "27", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:35:37.734000+00:00", "title": null}, "type": "Feature"}, {"bbox": [79.59279189, 13.70716627, 79.59279189, 13.70716627], "geometry": {"coordinates": [79.59279189, 13.70716627, 35.7861328125], "type": "Point"}, "id": "28", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:36:05.077000+00:00", "title": "Bin11 road"}, "type": "Feature"}, {"bbox": [79.59445192, 13.70607357, 79.59445192, 13.70607357], "geometry": {"coordinates": [79.59445192, 13.70607357, 22.43536376953125], "type": "Point"}, "id": "29", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:40:01.730000+00:00", "title": "Near south gate"}, "type": "Feature"}, {"bbox": [79.59435674, 13.705630619999997, 79.59435674, 13.705630619999997], "geometry": {"coordinates": [79.59435674, 13.705630619999997, 22.83709716796875], "type": "Point"}, "id": "30", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:41:05.049000+00:00", "title": "Abuz "}, "type": "Feature"}, {"bbox": [79.59444054999999, 13.707098909999997, 79.59444054999999, 13.707098909999997], "geometry": {"coordinates": [79.59444054999999, 13.707098909999997, 27.8370361328125], "type": "Point"}, "id": "31", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:43:45.005000+00:00", "title": "Outside south mess"}, "type": "Feature"}, {"bbox": [79.59440334, 13.707578309999993, 79.59440334, 13.707578309999993], "geometry": {"coordinates": [79.59440334, 13.707578309999993, 23.74334716796875], "type": "Point"}, "id": "32", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:44:35.152000+00:00", "title": "Sahana hostel"}, "type": "Feature"}, {"bbox": [79.59484223, 13.70809528, 79.59484223, 13.70809528], "geometry": {"coordinates": [79.59484223, 13.70809528, 21.92724609375], "type": "Point"}, "id": "33", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:46:15.189000+00:00", "title": "South canteen"}, "type": "Feature"}, {"bbox": [79.594832, 13.70816822, 79.594832, 13.70816822], "geometry": {"coordinates": [79.594832, 13.70816822, 17.85894775390625], "type": "Point"}, "id": "34", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:46:41.542000+00:00", "title": "South canteen2"}, "type": "Feature"}, {"bbox": [79.59394653999999, 13.708837109999996, 79.59394653999999, 13.708837109999996], "geometry": {"coordinates": [79.59394653999999, 13.708837109999996, 23.58935546875], "type": "Point"}, "id": "35", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:50:33.176000+00:00", "title": "Sports ground "}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_5c40c278c7da421086db8da0e99b84bb.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+    geo_json_5c40c278c7da421086db8da0e99b84bb.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["title", "note", "timestamp"];
+    let aliases = ["Location:", "Note:", "Timestamp:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": false,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_5c40c278c7da421086db8da0e99b84bb.addTo(map_4c48c807848e072a2c1b53f2d1cd42cd);
+        
+    
+            tile_layer_4b5ca2fdc692fcb6de80913523b38537.addTo(map_4c48c807848e072a2c1b53f2d1cd42cd);
+        
+    
+            geo_json_5c40c278c7da421086db8da0e99b84bb.addTo(map_4c48c807848e072a2c1b53f2d1cd42cd);
+        
+    
+        function geo_json_d55f1bc56c2832bb3c03726ae5831450_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "darkgreen",
+  "weight": 1,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "darkgreen",
+  "fillOpacity": 0.7,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 5,
+};
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_d55f1bc56c2832bb3c03726ae5831450_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_d55f1bc56c2832bb3c03726ae5831450 = L.geoJson(null, {
+                onEachFeature: geo_json_d55f1bc56c2832bb3c03726ae5831450_onEachFeature,
+            
+                pointToLayer: geo_json_d55f1bc56c2832bb3c03726ae5831450_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_d55f1bc56c2832bb3c03726ae5831450_add (data) {
+            geo_json_d55f1bc56c2832bb3c03726ae5831450
+                .addData(data);
+        }
+            geo_json_d55f1bc56c2832bb3c03726ae5831450_add({"bbox": [79.58648293, 13.705630619999997, 79.59484223, 13.71799433], "features": [{"bbox": [79.5943186700841, 13.714526960426394, 79.5943186700841, 13.714526960426394], "geometry": {"coordinates": [79.5943186700841, 13.714526960426394, 0.0], "type": "Point"}, "id": "0", "properties": {"note": "Not recorded", "timestamp": "2026-09-01 13:59:16.524000+00:00", "title": "Opposite admin building "}, "type": "Feature"}, {"bbox": [79.59177190000067, 13.715696210063944, 79.59177190000067, 13.715696210063944], "geometry": {"coordinates": [79.59177190000067, 13.715696210063944, 0.0], "type": "Point"}, "id": "1", "properties": {"note": "Not recorded", "timestamp": "2026-09-01 14:07:22.008000+00:00", "title": "Opposite AB1"}, "type": "Feature"}, {"bbox": [79.58704116999998, 13.717013400000003, 79.58704116999998, 13.717013400000003], "geometry": {"coordinates": [79.58704116999998, 13.717013400000003, 41.04193115234375], "type": "Point"}, "id": "2", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 14:56:40.947000+00:00", "title": "Outside north mess"}, "type": "Feature"}, {"bbox": [79.58648293, 13.717334999999999, 79.58648293, 13.717334999999999], "geometry": {"coordinates": [79.58648293, 13.717334999999999, 38.228271484375], "type": "Point"}, "id": "3", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 14:58:58.026000+00:00", "title": "Behind DES hostel"}, "type": "Feature"}, {"bbox": [79.58693941, 13.717604599999998, 79.58693941, 13.717604599999998], "geometry": {"coordinates": [79.58693941, 13.717604599999998, 37.5225830078125], "type": "Point"}, "id": "4", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 15:01:46.893000+00:00", "title": "DES Hostel front "}, "type": "Feature"}, {"bbox": [79.58716412, 13.71799433, 79.58716412, 13.71799433], "geometry": {"coordinates": [79.58716412, 13.71799433, 35.34112548828125], "type": "Point"}, "id": "5", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 15:03:05.333000+00:00", "title": "Malhar Hostel Front"}, "type": "Feature"}, {"bbox": [79.58745039, 13.71775014, 79.58745039, 13.71775014], "geometry": {"coordinates": [79.58745039, 13.71775014, 34.95220947265625], "type": "Point"}, "id": "6", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 15:04:45.820000+00:00", "title": "Malhar hostel gate"}, "type": "Feature"}, {"bbox": [79.58851290999999, 13.71656694, 79.58851290999999, 13.71656694], "geometry": {"coordinates": [79.58851290999999, 13.71656694, 28.59356689453125], "type": "Point"}, "id": "7", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 15:16:04.127000+00:00", "title": "Near malhar hostel"}, "type": "Feature"}, {"bbox": [79.58858182, 13.715611670000001, 79.58858182, 13.715611670000001], "geometry": {"coordinates": [79.58858182, 13.715611670000001, 26.3104248046875], "type": "Point"}, "id": "8", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 15:19:41.703000+00:00", "title": "Road"}, "type": "Feature"}, {"bbox": [79.58924036999998, 13.715016870000001, 79.58924036999998, 13.715016870000001], "geometry": {"coordinates": [79.58924036999998, 13.715016870000001, 20.23516845703125], "type": "Point"}, "id": "9", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 15:21:45.566000+00:00", "title": "Road AB1 cut"}, "type": "Feature"}, {"bbox": [79.58959247, 13.714567569999996, 79.58959247, 13.714567569999996], "geometry": {"coordinates": [79.58959247, 13.714567569999996, 19.839111328125], "type": "Point"}, "id": "10", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 15:22:53.389000+00:00", "title": "Near LHC bus stop"}, "type": "Feature"}, {"bbox": [79.5901248, 13.71430683, 79.5901248, 13.71430683], "geometry": {"coordinates": [79.5901248, 13.71430683, 17.46197509765625], "type": "Point"}, "id": "11", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 15:24:37.625000+00:00", "title": "LHC bus stop"}, "type": "Feature"}, {"bbox": [79.59103217, 13.714977349999996, 79.59103217, 13.714977349999996], "geometry": {"coordinates": [79.59103217, 13.714977349999996, 11.1209716796875], "type": "Point"}, "id": "12", "properties": {"note": "Not recorded", "timestamp": "2026-09-02 15:28:00.463000+00:00", "title": "Outside LHC"}, "type": "Feature"}, {"bbox": [79.59470848, 13.70719971, 79.59470848, 13.70719971], "geometry": {"coordinates": [79.59470848, 13.70719971, 118.96026611328125], "type": "Point"}, "id": "13", "properties": {"note": "Not recorded", "timestamp": "2026-09-04 07:40:49.836000+00:00", "title": "Health center "}, "type": "Feature"}, {"bbox": [79.59449264, 13.706655279999998, 79.59449264, 13.706655279999998], "geometry": {"coordinates": [79.59449264, 13.706655279999998, 22.65753173828125], "type": "Point"}, "id": "14", "properties": {"note": "Not recorded", "timestamp": "2026-09-04 07:42:34.083000+00:00", "title": "Near old library "}, "type": "Feature"}, {"bbox": [79.59169805, 13.712831560000001, 79.59169805, 13.712831560000001], "geometry": {"coordinates": [79.59169805, 13.712831560000001, 18.6517333984375], "type": "Point"}, "id": "15", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:22:45.709000+00:00", "title": "bin 1 near director circle "}, "type": "Feature"}, {"bbox": [79.59159744999998, 13.711985109999999, 79.59159744999998, 13.711985109999999], "geometry": {"coordinates": [79.59159744999998, 13.711985109999999, 21.35223388671875], "type": "Point"}, "id": "16", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:24:26.779000+00:00", "title": "Bin3 director circle"}, "type": "Feature"}, {"bbox": [79.59238389, 13.71214995, 79.59238389, 13.71214995], "geometry": {"coordinates": [79.59238389, 13.71214995, 21.28509521484375], "type": "Point"}, "id": "17", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:25:54.617000+00:00", "title": "Bin2 director circle"}, "type": "Feature"}, {"bbox": [79.59231634, 13.711081960000001, 79.59231634, 13.711081960000001], "geometry": {"coordinates": [79.59231634, 13.711081960000001, 25.8599853515625], "type": "Point"}, "id": "18", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:27:42.620000+00:00", "title": "Bin4 road"}, "type": "Feature"}, {"bbox": [79.59234922, 13.709830599999998, 79.59234922, 13.709830599999998], "geometry": {"coordinates": [79.59234922, 13.709830599999998, 30.571533203125], "type": "Point"}, "id": "19", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:29:35.229000+00:00", "title": "Bin5 road"}, "type": "Feature"}, {"bbox": [79.59267413999999, 13.70833538, 79.59267413999999, 13.70833538], "geometry": {"coordinates": [79.59267413999999, 13.70833538, 32.932373046875], "type": "Point"}, "id": "20", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:31:51.021000+00:00", "title": null}, "type": "Feature"}, {"bbox": [79.59266649999998, 13.708319849999999, 79.59266649999998, 13.708319849999999], "geometry": {"coordinates": [79.59266649999998, 13.708319849999999, 33.18212890625], "type": "Point"}, "id": "21", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:31:53.575000+00:00", "title": "Bin6 road"}, "type": "Feature"}, {"bbox": [79.59290057, 13.707423170000002, 79.59290057, 13.707423170000002], "geometry": {"coordinates": [79.59290057, 13.707423170000002, 33.4071044921875], "type": "Point"}, "id": "22", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:33:34.828000+00:00", "title": "Bin7 road"}, "type": "Feature"}, {"bbox": [79.59293083, 13.707425889999996, 79.59293083, 13.707425889999996], "geometry": {"coordinates": [79.59293083, 13.707425889999996, 32.90716552734375], "type": "Point"}, "id": "23", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:33:57.586000+00:00", "title": "Bin8 road"}, "type": "Feature"}, {"bbox": [79.59291492, 13.707357019999998, 79.59291492, 13.707357019999998], "geometry": {"coordinates": [79.59291492, 13.707357019999998, 34.66717529296875], "type": "Point"}, "id": "24", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:34:34.029000+00:00", "title": null}, "type": "Feature"}, {"bbox": [79.59291492, 13.707357019999998, 79.59291492, 13.707357019999998], "geometry": {"coordinates": [79.59291492, 13.707357019999998, 34.66717529296875], "type": "Point"}, "id": "25", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:34:37.280000+00:00", "title": "Bin9 road"}, "type": "Feature"}, {"bbox": [79.59294972, 13.70734612, 79.59294972, 13.70734612], "geometry": {"coordinates": [79.59294972, 13.70734612, 36.034423828125], "type": "Point"}, "id": "26", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:34:53.793000+00:00", "title": "Bin10 road near south gate"}, "type": "Feature"}, {"bbox": [79.59280137999998, 13.7071721, 79.59280137999998, 13.7071721], "geometry": {"coordinates": [79.59280137999998, 13.7071721, 35.834228515625], "type": "Point"}, "id": "27", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:35:37.734000+00:00", "title": null}, "type": "Feature"}, {"bbox": [79.59279189, 13.70716627, 79.59279189, 13.70716627], "geometry": {"coordinates": [79.59279189, 13.70716627, 35.7861328125], "type": "Point"}, "id": "28", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:36:05.077000+00:00", "title": "Bin11 road"}, "type": "Feature"}, {"bbox": [79.59445192, 13.70607357, 79.59445192, 13.70607357], "geometry": {"coordinates": [79.59445192, 13.70607357, 22.43536376953125], "type": "Point"}, "id": "29", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:40:01.730000+00:00", "title": "Near south gate"}, "type": "Feature"}, {"bbox": [79.59435674, 13.705630619999997, 79.59435674, 13.705630619999997], "geometry": {"coordinates": [79.59435674, 13.705630619999997, 22.83709716796875], "type": "Point"}, "id": "30", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:41:05.049000+00:00", "title": "Abuz "}, "type": "Feature"}, {"bbox": [79.59444054999999, 13.707098909999997, 79.59444054999999, 13.707098909999997], "geometry": {"coordinates": [79.59444054999999, 13.707098909999997, 27.8370361328125], "type": "Point"}, "id": "31", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:43:45.005000+00:00", "title": "Outside south mess"}, "type": "Feature"}, {"bbox": [79.59440334, 13.707578309999993, 79.59440334, 13.707578309999993], "geometry": {"coordinates": [79.59440334, 13.707578309999993, 23.74334716796875], "type": "Point"}, "id": "32", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:44:35.152000+00:00", "title": "Sahana hostel"}, "type": "Feature"}, {"bbox": [79.59484223, 13.70809528, 79.59484223, 13.70809528], "geometry": {"coordinates": [79.59484223, 13.70809528, 21.92724609375], "type": "Point"}, "id": "33", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:46:15.189000+00:00", "title": "South canteen"}, "type": "Feature"}, {"bbox": [79.594832, 13.70816822, 79.594832, 13.70816822], "geometry": {"coordinates": [79.594832, 13.70816822, 17.85894775390625], "type": "Point"}, "id": "34", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:46:41.542000+00:00", "title": "South canteen2"}, "type": "Feature"}, {"bbox": [79.59394653999999, 13.708837109999996, 79.59394653999999, 13.708837109999996], "geometry": {"coordinates": [79.59394653999999, 13.708837109999996, 23.58935546875], "type": "Point"}, "id": "35", "properties": {"note": "Not recorded", "timestamp": "2026-09-06 11:50:33.176000+00:00", "title": "Sports ground "}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_d55f1bc56c2832bb3c03726ae5831450.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+    geo_json_d55f1bc56c2832bb3c03726ae5831450.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["title", "note", "timestamp"];
+    let aliases = ["Location:", "Note:", "Timestamp:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": false,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_d55f1bc56c2832bb3c03726ae5831450.addTo(map_4c48c807848e072a2c1b53f2d1cd42cd);
+        
+    
+            tile_layer_4b5ca2fdc692fcb6de80913523b38537.addTo(map_4c48c807848e072a2c1b53f2d1cd42cd);
+        
+    
+            geo_json_5c40c278c7da421086db8da0e99b84bb.addTo(map_4c48c807848e072a2c1b53f2d1cd42cd);
+        
+    
+            geo_json_d55f1bc56c2832bb3c03726ae5831450.addTo(map_4c48c807848e072a2c1b53f2d1cd42cd);
+        
+    
+            var layer_control_f4de462e39371ed0864551679d2939ae_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_4b5ca2fdc692fcb6de80913523b38537,
+                },
+                overlays :  {
+                    "Waste-bin locations" : geo_json_d55f1bc56c2832bb3c03726ae5831450,
+                },
+            };
+            let layer_control_f4de462e39371ed0864551679d2939ae = L.control.layers(
+                layer_control_f4de462e39371ed0864551679d2939ae_layers.base_layers,
+                layer_control_f4de462e39371ed0864551679d2939ae_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_4c48c807848e072a2c1b53f2d1cd42cd);
+
+        
+    
+            tile_layer_4b5ca2fdc692fcb6de80913523b38537.addTo(map_4c48c807848e072a2c1b53f2d1cd42cd);
+        
+    
+            geo_json_5c40c278c7da421086db8da0e99b84bb.addTo(map_4c48c807848e072a2c1b53f2d1cd42cd);
+        
+    
+            geo_json_d55f1bc56c2832bb3c03726ae5831450.addTo(map_4c48c807848e072a2c1b53f2d1cd42cd);
+        
+    
+            var layer_control_623ece02876c74ed7a4850b7feec9cb8_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_4b5ca2fdc692fcb6de80913523b38537,
+                },
+                overlays :  {
+                    "Waste-bin locations" : geo_json_d55f1bc56c2832bb3c03726ae5831450,
+                },
+            };
+            let layer_control_623ece02876c74ed7a4850b7feec9cb8 = L.control.layers(
+                layer_control_623ece02876c74ed7a4850b7feec9cb8_layers.base_layers,
+                layer_control_623ece02876c74ed7a4850b7feec9cb8_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_4c48c807848e072a2c1b53f2d1cd42cd);
+
+        
+    
+            tile_layer_4b5ca2fdc692fcb6de80913523b38537.addTo(map_4c48c807848e072a2c1b53f2d1cd42cd);
+        
+    
+            geo_json_5c40c278c7da421086db8da0e99b84bb.addTo(map_4c48c807848e072a2c1b53f2d1cd42cd);
+        
+    
+            geo_json_d55f1bc56c2832bb3c03726ae5831450.addTo(map_4c48c807848e072a2c1b53f2d1cd42cd);
+        
+</script>
+</html>
